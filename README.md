@@ -1,39 +1,37 @@
-# ✅ Task Manager API (Backend)
+# ✅ Task Manager API (Full Stack)
 
-This is a backend service to create, update, retrieve, and delete tasks. It is built using **Node.js**, **Express.js**, and **MongoDB** as part of the **Keploy API Fellowship** assignment.
+This is a full-stack Task Management web app built with **Node.js**, **Express.js**, **MongoDB**, and a frontend using **HTML/CSS/JavaScript**. Built as part of the **Keploy API Fellowship** to demonstrate API creation, database integration, and frontend interaction.
 
 ---
 
 ## 🚀 Features
 
-- ✅ Add new tasks with title and description
-- ✅ Retrieve all existing tasks
-- ✅ Update tasks (including marking as completed)
-- ✅ Delete tasks by ID
-- ✅ MongoDB integration with Mongoose
-- ✅ Tested with Postman
-- ✅ RESTful API architecture
+- ✅ Add, retrieve, update, and delete tasks
+- ✅ Mark tasks as completed
+- ✅ Simple frontend UI for interacting with API
+- ✅ RESTful API tested via Postman and frontend
+- ✅ Clean UI with hover effects and transitions
+- ✅ MongoDB integration for data persistence
 
 ---
 
 ## ⚙️ Technologies Used
 
-- Node.js + Express
-- MongoDB (with Mongoose)
-- dotenv
-- Postman (for API testing)
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (with Mongoose)
+- **Frontend**: HTML, CSS, JavaScript
+- **Testing**: Postman, Fetch API
+- **Dev Tools**: dotenv, nodemon
 
 ---
 
 ## 🛠️ Setup Instructions
 
-Follow these steps to run the project locally:
-
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/sraj5252/task-manager-api.git
-cd task-manager-api
+git clone https://github.com/sraj5252/task-manager.git
+cd task-manager
 ```
 
 ### 2. Install Dependencies
@@ -154,17 +152,58 @@ Response:
 
 ---
 
+## 🖥️ Frontend Interface
+
+A basic responsive UI is available to manage tasks from the browser.
+
+### ✨ Features
+
+- Add tasks  
+- View all tasks  
+- Mark as completed  
+- Delete tasks  
+- Styled with smooth, modern design
+
+## 📁 Frontend Structure
+
+```
+frontend/
+├── index.html   # UI layout
+├── style.css    # Beautiful responsive styling
+└── script.js    # Fetch API for interaction
+```
+
+
+### 💻 To Run:
+
+**Start backend:**
+
+```bash
+node server.js
+```
+
+**Open in browser:**
+
+```
+http://localhost:5000
+```
+
 ## 📁 Project Structure
 
 ```
 task-manager-api/
 ├── server.js
 ├── .env
+├── package.json
 ├── README.md
 ├── models/
 │   └── Task.js
 ├── routes/
 │   └── taskRoutes.js
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
 ```
 
 ## 📝 Assumptions
