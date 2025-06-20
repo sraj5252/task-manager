@@ -240,4 +240,3 @@ This project uses **Jest** and **Supertest** for automated API testing.
 ![Test Coverage Report](./assets/coverage.png)
 
 ---
-
