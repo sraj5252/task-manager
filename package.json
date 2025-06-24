@@ -1,19 +1,22 @@
 {
   "name": "task-manager",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "A simple task manager API with frontend",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest --coverage"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Raj Singh",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mongoose": "^8.16.0"
   },
-  "devDependencies": {},
-  "description": ""
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  }
 }

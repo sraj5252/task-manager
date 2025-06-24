@@ -18,20 +18,26 @@ app.use('/api/tasks', taskRoutes);
 // Serve static frontend files
 app.use(express.static(path.join(__dirname, 'frontend')));
 
-// Serve index.html on root
+// Serve frontend index.html at root
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
 
-// Connect to MongoDB and start server
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => {
-  console.log('MongoDB connected');
-  app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
-})
-.catch(err => {
-  console.error('MongoDB connection error:', err.message);
-});
+// Connect to MongoDB and conditionally start server
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log('MongoDB connected');
+
+    // Only start the server if not running tests
+    if (process.env.NODE_ENV !== 'test') {
+      app.listen(PORT, () =>
+        console.log(`Server running at http://localhost:${PORT}`)
+      );
+    }
+  })
+  .catch(err => {
+    console.error('MongoDB connection error:', err.message);
+  });
+
+// Export app for testing
+module.exports = app;
