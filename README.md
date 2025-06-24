@@ -217,3 +217,27 @@ task-manager-api/
 ## 📬 Contact
 
 For questions or feedback, contact **sraj80525@gmail.com**
+
+---
+
+---
+
+## 🧪 Testing & Coverage
+
+This project uses **Jest** and **Supertest** for automated API testing.
+
+### 🔍 Test Coverage Summary
+
+- **Statements:** 77.08%
+- **Branches:** 50%
+- **Functions:** 50%
+- **Lines:** 77.08%
+
+> Coverage was measured using `jest --coverage`.
+
+### 📸 Coverage Report Screenshot
+
+![Test Coverage Report](./assets/coverage.png)
+
+---
+
